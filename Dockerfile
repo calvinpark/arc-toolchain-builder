@@ -1,8 +1,8 @@
-# ARC Toolchain Builder - Linux 64
+# ARC Toolchain Builder - Linux 32
 #
 # Version	1.0
 
-FROM		ubuntu:12.04
+FROM		32bit/ubuntu:14.04
 MAINTAINER	Calvin Sangbin Park <calvinspark@gmail.com>
 
 # Use bash. I like bash.
