@@ -15,6 +15,14 @@ RUN apt-get update && \
 		flex \
 		git-core \
 		libexpat1-dev libncurses5-dev libx11-dev \
+        software-properties-common \
         texinfo texlive \
+        wget \
         zlib1g-dev && \
     apt-get clean
+
+# Get patchelf
+RUN wget http://nixos.org/releases/patchelf/patchelf-0.8/patchelf-0.8.tar.bz2 && tar -xf patchelf-0.8.tar.bz2
+WORKDIR patchelf-0.8
+RUN ./configure && make && make install
+RUN ln --symbolic /usr/local/bin/patchelf /bin/patchelf
