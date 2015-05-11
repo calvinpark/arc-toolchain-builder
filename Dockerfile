@@ -19,7 +19,7 @@ RUN apt-get update && \
         software-properties-common \
         texinfo texlive \
         wget \
-        zlib1g-dev && \
+        zip zlib1g-dev && \
     apt-get clean
 
 # Get patchelf
